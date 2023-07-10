@@ -1,0 +1,36 @@
+<div class="loginPage">
+  <mat-card class="loginCard">
+    <h1>Login</h1>
+    <div class="boxSizedY"></div>
+
+    <form [formGroup]="formLogin" class="formLogin" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your username</mat-label>
+        <input
+          matInput
+          placeholder="username"
+          type="text"
+          formControlName="username"
+          id="username"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input
+          matInput
+          placeholder="password"
+          type="password"
+          formControlName="password"
+          id="password"
+        />
+      </mat-form-field>
+      <p style="color: red" *ngIf="statusError">
+        username or password is incorrect!
+      </p>
+      <button mat-flat-button class="btnLogin btn" type="submit">Login</button>
+    </form>
+    <div class="boxSizedY"></div>
+    <mat-divider inset></mat-divider>
+    <!-- <button mat-flat-button routerLink="#">Register</button> -->
+  </mat-card>
+</div>

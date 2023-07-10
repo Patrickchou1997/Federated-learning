@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <button mat-icon-button (click)="onToggleSideBar()">
+      <img
+      src="/assets/icons/menus32.png"
+      alt=""
+      style="width: 20px; height: 20px"
+    />
+    </button>
+  </button>
+  <!-- <span>Hide Menu</span> -->
+  <span class="example-spacer"></span>
+  <button *ngIf="loginStatus" mat-icon-button routerLink="/profile">
+    <img
+      src="/assets/icons/user64.png"
+      alt=""
+      style="width: 20px; height: 20px"
+    />
+  </button>
+  <button *ngIf="!loginStatus" mat-raised-button (click)="login()">
+    Login
+  </button>
+</mat-toolbar>

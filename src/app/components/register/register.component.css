@@ -1,0 +1,26 @@
+.registerPage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding-top: 10px;
+}
+.registerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 25px 20px;
+  width: 500px;
+}
+.formRegister {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+mat-form-field {
+  width: 100%;
+}

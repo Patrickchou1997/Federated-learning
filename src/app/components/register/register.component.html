@@ -1,0 +1,93 @@
+<div class="registerPage">
+  <mat-card class="registerCard">
+    <h1>Register</h1>
+    <div class="boxSizedY"></div>
+    <form
+      [formGroup]="formRegister"
+      class="formRegister"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>First name</mat-label>
+          <input
+            matInput
+            placeholder="first name"
+            type="text"
+            formControlName="firstname"
+            id="firstname"
+          />
+        </mat-form-field>
+        <div class="boxSizedX"></div>
+        <mat-form-field appearance="outline">
+          <mat-label>Last name</mat-label>
+          <input
+            matInput
+            placeholder="last name"
+            type="text"
+            formControlName="lastname"
+            id="lastname"
+          />
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>your email</mat-label>
+        <input
+          matInput
+          placeholder="email"
+          type="email"
+          formControlName="email"
+          id="email"
+          required
+        />
+        <mat-hint>@mahidol.ac.th</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>organization</mat-label>
+        <mat-select formControlName="organizationID">
+          <mat-option
+            *ngFor="let item of organizations"
+            value="{{ item.siteID }}"
+            >{{ item.siteName }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your username</mat-label>
+          <input
+            matInput
+            placeholder="username"
+            type="text"
+            formControlName="username"
+            id="username"
+          />
+        </mat-form-field>
+        <div class="boxSizedX"></div>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input
+            matInput
+            placeholder="password"
+            type="password"
+            formControlName="password"
+            id="password"
+          />
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Role</mat-label>
+        <mat-select formControlName="roleID">
+          <mat-option *ngFor="let item of roles" value="{{ item.roleID }}">{{
+            item.roleName
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p style="color: red" *ngIf="statusError">Incomplete information!</p>
+      <mat-divider inset></mat-divider>
+      <button mat-raised-button class="btnLogin btn" type="submit">
+        Register
+      </button>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+  margin: auto 0;
+}
+.mat-column-prove {
+  text-align: center;
+}
+.mat-column-cancel {
+  text-align: center;
+}
+.mat-header-cell {
+  text-align: center;
+}
+.btnSearch {
+  height: 50px;
+  margin-top: 5px;
+  background-color: #4bb543;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.filter {
+  width: 300px;
+}

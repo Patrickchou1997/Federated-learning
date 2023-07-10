@@ -1,0 +1,17 @@
+<div class="cardReport">
+  <mat-card>
+    <h2>Report</h2>
+    <form [formGroup]="formReport" class="example-form" (submit)="onSubmit()">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="titleReport" id="titleReport" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput rows="5" formControlName="descriptionReport" id="descriptionReport"></textarea>
+      </mat-form-field>
+      <button mat-raised-button type="submit">Send</button>
+    </form>
+  </mat-card>
+</div>

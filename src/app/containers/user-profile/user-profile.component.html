@@ -1,0 +1,9 @@
+<div class="column justify-center align-center">
+  <div class="alert alert-success" *ngIf="userStatus">
+    Your role is allowed!
+  </div>
+  <div class="alert alert-warning" *ngIf="!userStatus">
+    Waiting for Administrator allow your role!
+  </div>
+  <button mat-raised-button (click)="logout()">Log Out</button>
+</div>

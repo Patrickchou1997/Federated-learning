@@ -1,0 +1,55 @@
+<div class="sideBar">
+  <div class="sideBarHeader">
+    <h2 class="txtLight TxtHeader" (click)="sideItemNow = 0" routerLink="/">
+      MU Federated Learning
+    </h2>
+    <div class="sideBarContent">
+      <div
+        class="item btn row align-center"
+        [ngStyle]="{
+          color: sideItemNow == 1 ? 'var(--turquoise-blue)' : 'white'
+        }"
+        (click)="sideItemNow = 1"
+        routerLink="/new-project"
+      >
+        <img src="/assets/icons/new.png" alt="" class="icon" />
+        <h3>New Project</h3>
+      </div>
+      <div
+        class="item btn row align-center"
+        [ngStyle]="{
+          color: sideItemNow == 2 ? 'var(--turquoise-blue)' : 'white'
+        }"
+        (click)="sideItemNow = 2"
+        routerLink="/monitoring"
+      >
+        <img src="/assets/icons/filled.png" alt="" class="icon" />
+        <h3>Monitoring</h3>
+      </div>
+      <!-- <div
+        class="item btn row align-center"
+        [ngStyle]="{
+          color: sideItemNow == 3 ? 'var(--turquoise-blue)' : 'white'
+        }"
+        (click)="sideItemNow = 3"
+        routerLink="/report"
+      >
+        <mat-icon>pie_chart</mat-icon>
+        <h3>Report</h3>
+      </div> -->
+      <div
+        *ngIf="loginStatus && userRole == 'R000000001'"
+        class="item btn row align-center"
+        [ngStyle]="{
+          color: sideItemNow == 4 ? 'var(--turquoise-blue)' : 'white'
+        }"
+        (click)="sideItemNow = 4"
+        routerLink="/management"
+      >
+        <img src="/assets/icons/manage_acc.png" alt="" class="icon" />
+        <h3>Management</h3>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="sideBarFooter">Footer</div> -->
+</div>

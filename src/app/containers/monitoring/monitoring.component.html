@@ -1,0 +1,153 @@
+<div class="monitoringContent">
+  <div class="card cardMonitoring">
+    <div class="row align-center monitoringHeader">
+      <h4>Monitoring Existing Project</h4>
+      <div class="row align-center">
+        <div class="status row align-center" *ngIf="true">
+          <div class="completed"></div>
+          completed
+        </div>
+        <div class="boxSizedX"></div>
+        <div class="status row align-center" *ngIf="true">
+          <div class="in-progress"></div>
+          in-progress
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <mat-form-field class="formSearch" appearance="outline">
+        <mat-label>Search</mat-label>
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="value"
+          (keydown.enter)="applyFilter()"
+        />
+        <img matPrefix
+              src="/assets/icons/search.png"
+              alt=""
+              style="width: 18px;height: 18px;margin: 2px 5px;"
+            />
+        <button
+          *ngIf="value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="value = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        class="btnSearch txtLight"
+        (click)="applyFilter()"
+      >
+        SEARCH
+      </button>
+    </div>
+    <div class="mat-elevation-z8">
+      <table
+        mat-table
+        [dataSource]="dataSource"
+        matSort
+        (matSortChange)="sortData($event)"
+      >
+        <ng-container matColumnDef="projID">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+          <td mat-cell *matCellDef="let element" (click)="onPressed(element)">
+            {{ element.projID }}
+          </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="projTitle">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+          <td mat-cell *matCellDef="let element" (click)="onPressed(element)">
+            {{ element.projTitle }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="appName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>App name</th>
+          <td mat-cell *matCellDef="let element" (click)="onPressed(element)">
+            {{ element.appName }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="submit_time">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Submit time</th>
+          <td mat-cell *matCellDef="let element" (click)="onPressed(element)">
+            {{ calDate(element.submit_time) }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="duration">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Duration</th>
+          <td mat-cell *matCellDef="let element" (click)="onPressed(element)">
+            {{ calDuration(element.duration) }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="projStatus">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+          <td mat-cell *matCellDef="let element" (click)="onPressed(element)">
+            <div class="row align-center" *ngIf="element.projStatus == 'S'">
+              <div class="completed"></div>
+              completed
+            </div>
+            <div class="row align-center" *ngIf="element.projStatus == 'I'">
+              <div class="in-progress"></div>
+              in-progress
+            </div>
+          </td>
+        </ng-container>
+
+        <!-- Download model Column -->
+        <ng-container matColumnDef="DLmodel">
+          <th mat-header-cell *matHeaderCellDef>Model</th>
+          <td mat-cell *matCellDef="let element">
+            <img
+              *ngIf="element.projStatus == 'S'"
+              src="/assets/icons/download.png"
+              alt=""
+              class="icon"
+              (click)="onPressedDL(element)"
+            />
+          </td>
+        </ng-container>
+
+        <!-- Download experiment Log Column -->
+        <ng-container matColumnDef="DLexperLOG" c;ass>
+          <th mat-header-cell *matHeaderCellDef>Log</th>
+          <td mat-cell *matCellDef="let element">
+            <img
+              *ngIf="element.projStatus == 'S'"
+              src="/assets/icons/download.png"
+              alt=""
+              class="icon"
+              (click)="onPressedDLLOG(element)"
+            />
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: displayedColumns"
+          class="click_row"
+        ></tr>
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">
+            No data matching the filter "{{ value }}"
+          </td>
+        </tr>
+      </table>
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Select page of users"
+      ></mat-paginator>
+    </div>
+    <div class="boxSizedY"></div>
+  </div>
+</div>

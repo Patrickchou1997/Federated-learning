@@ -1,0 +1,30 @@
+.loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 25px 20px;
+  width: 350px;
+}
+.formLogin {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px;
+}
+.btnLogin {
+  width: 100%;
+  background-color: var(--dark-blue);
+  color: white;
+}
+mat-form-field {
+  width: 100%;
+}

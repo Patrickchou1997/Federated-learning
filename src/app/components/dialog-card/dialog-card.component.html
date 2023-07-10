@@ -1,0 +1,18 @@
+<div
+  class="alert"
+  *ngIf="isVisible$ | async"
+  [ngClass]="
+    item.status == 'success'
+      ? 'success'
+      : item.status == 'warning'
+      ? 'warning'
+      : item.status == 'danger'
+      ? 'danger'
+      : ''
+  "
+>
+  <strong>{{ item.title }}</strong> {{ item.desc }}
+  <span class="closebtn" onclick="this.parentElement.style.display='none';"
+    >&times;</span
+  >
+</div>

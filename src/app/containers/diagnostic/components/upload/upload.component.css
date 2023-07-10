@@ -1,0 +1,64 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 100px);
+}
+.header {
+  height: 50px;
+  padding: 10px;
+}
+.header h1 {
+  margin: 0;
+  padding: 0;
+  color: rgb(42, 36, 213);
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  /* background-color: azure; */
+  border-top: #111 solid 1px;
+  border-bottom: #111 solid 1px;
+}
+.btnUpload {
+  background-color: black;
+  width: 150px;
+  height: 50px;
+}
+.upload-form {
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  display: flex;
+}
+.box {
+  width: 330px;
+  height: 50px;
+  border: black solid 1.5px;
+}
+.upload-form h3 {
+  margin: 0;
+  padding: 0;
+  color: rgb(42, 36, 213);
+}
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: solid 2px rgba(0, 0, 0, 0.1);
+  padding: 15px 5px;
+}
+::file-selector-button {
+  display: none;
+}
+.disabled-button {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}

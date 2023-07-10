@@ -1,0 +1,25 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="side" [(opened)]="sideBarStatus">
+    <app-side-bar></app-side-bar
+  ></mat-drawer>
+  <mat-drawer-content style="position: relative">
+    <app-navigation-bar
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+      "
+    ></app-navigation-bar>
+    <div class="routeContent">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
+<div class="dialog-show">
+  <app-dialog-card
+    *ngFor="let item of dialogData; let i = index"
+    [item]="item"
+  ></app-dialog-card>
+</div>

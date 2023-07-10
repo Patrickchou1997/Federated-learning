@@ -1,0 +1,125 @@
+<div class="newProjectContent">
+  <div class="card cardProItem template">
+    <!-- <h4>Federated Learning Project</h4> -->
+    <h3>Download Template</h3>
+    <div class="boxSizedY"></div>
+    <div class="cardProTemplate">
+      <div class="row align-center">
+        <h2 class="title">Script Template:</h2>
+        <mat-form-field appearance="outline">
+          <mat-label>Choose Template</mat-label>
+          <mat-select [(value)]="templateN">
+            <mat-option
+              *ngFor="let item of templates"
+              value="{{ item.templateID }}"
+            >
+              <h3>{{ item.templateTitle }}</h3>
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <button
+        mat-raised-button
+        class="btnProject btn-new"
+        (click)="onPressedDW()"
+      >
+        Download App
+      </button>
+    </div>
+  </div>
+  <div class="card cardProItem templateContent">
+    <div class="templateBoxContent">
+    <h3>Create New Project</h3>
+    <div class="boxSizedY"></div>
+      <div class="row align-center">
+        <h2 class="title">Project Title:</h2>
+        <mat-form-field class="formSearch" appearance="outline">
+          <mat-label>Project Name</mat-label>
+          <input
+            id="projTitle"
+            matInput
+            type="text"
+            [(ngModel)]="projTitle"
+            onKeyDown="if(event.keyCode === 32)
+          return false;"
+          />
+        </mat-form-field>
+      </div>
+      <div class="row align-center">
+        <h2 class="title">Script:</h2>
+        <!-- <label class="custom-file-upload">
+          Upload Script -->
+        <input
+          #chooseFile
+          id="chooseFile"
+          class="up-file"
+          type="file"
+          placeholder="upload script"
+          accept=".zip"
+          (change)="onChange($event)"
+        />
+        <!-- </label> -->
+        <div class="boxSizedX"></div>
+        <!-- <mat-hint>*.zip</mat-hint> -->
+        <button
+          mat-raised-button
+          class="btnProject"
+          (click)="chooseFile.click()"
+        >
+          Upload App
+        </button>
+      </div>
+    </div>
+    <!-- <div class="templateBoxContent">
+      <h2>Site Selection</h2>
+      <div>
+        <mat-slide-toggle checked="false" disabled="true" color="primary"
+          >ICT</mat-slide-toggle
+        >
+      </div>
+      <div>
+        <mat-slide-toggle checked="false" disabled="true" color="primary"
+          >RAMA</mat-slide-toggle
+        >
+      </div>
+      <div>
+        <mat-slide-toggle checked="false" disabled="true" color="primary"
+          >KON KAEN</mat-slide-toggle
+        >
+      </div>
+    </div>
+    <div class="templateBoxContent">
+      <h2>Datasets Selection</h2>
+      <div class="row">
+        <p style="color: green">/ChestX</p>
+        <div class="boxSizedX"></div>
+        <p style="color: green">/Lung ICT</p>
+      </div>
+      <div class="boxSizedY"></div>
+      <div class="row justify-between align-center">
+        <div class="row align-center">
+          <mat-form-field appearance="outline">
+            <mat-label>Data available based Site selection Dropbox</mat-label>
+            <mat-select disabled>
+              <mat-option
+                *ngFor="let item of templates"
+                value="{{ item.templateID }}"
+              >
+                <h3>{{ item.templateTitle }}</h3>
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="boxSizedX"></div>
+          <button mat-raised-button class="btnProject btn-new">ADD Data</button>
+        </div>
+        <button mat-raised-button class="btnUploadDTS btn-new">
+          Upload new Datasets
+        </button>
+      </div>
+    </div> -->
+    <button mat-raised-button class="btnSubmit" (click)="onSubmit()">
+      Create and Run
+    </button>
+    <div class="boxSizedY"></div>
+  </div>
+</div>

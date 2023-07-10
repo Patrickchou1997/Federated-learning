@@ -1,0 +1,104 @@
+.monitoringContent {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.cardMonitoring {
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.monitoringHeader {
+  width: 100%;
+  justify-content: space-between;
+}
+.monitoringBoxContent {
+  padding: 15px 5px;
+  width: 100%;
+  border-bottom: 2px rgba(0, 0, 0, 0.1) solid;
+  justify-content: space-between;
+}
+.status {
+  margin-top: 5px;
+  height: 20px;
+  width: 90px;
+}
+.completed {
+  width: 10px;
+  height: 10px;
+  background-color: #4bb543;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.in-progress {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.content {
+  width: calc(100% - 240px);
+  padding-left: 20px;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+.btnMonitoring {
+  background-color: dodgerblue;
+  margin-left: 10px;
+}
+.btnDL {
+  background-color: #4bb543;
+  margin-bottom: 5px;
+}
+.footerMonitor {
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 150px;
+}
+.title {
+  margin-right: 5px;
+}
+.formSearch {
+  width: 300px;
+}
+.btnSearch {
+  height: 50px;
+  margin-top: 5px;
+  background-color: dodgerblue;
+}
+.click_row {
+  cursor: pointer;
+}
+.click_row:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.click_row:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+}
+table {
+  width: 100%;
+}
+.mat-column-DLmodel {
+  text-align: center;
+}
+.mat-column-DLexperLOG {
+  text-align: center;
+}
+.mat-header-cell {
+  text-align: center;
+}

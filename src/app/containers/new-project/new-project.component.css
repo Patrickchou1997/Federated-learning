@@ -1,0 +1,70 @@
+.newProjectContent {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.cardProItem {
+  padding: 10px 20px 30px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.cardProTemplate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.templateContent {
+  align-items: center;
+}
+.templateBoxContent {
+  border-bottom: 2px rgba(0, 0, 0, 0.1) solid;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+.btnProject {
+  background-color: dodgerblue;
+  color: white;
+}
+.btnUploadDTS {
+  background-color: #9543b5;
+  color: white;
+}
+.btnSubmit {
+  background-color: #4bb543;
+  color: white;
+}
+.title {
+  margin-right: 5px;
+}
+.btn-new {
+  margin-bottom: 18px;
+}
+.up-file {
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  padding:  2px;
+}
+input::file-selector-button {
+  font-weight: bold;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+  height: 45px;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 7px 12px;
+  cursor: pointer;
+}
