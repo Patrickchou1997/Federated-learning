@@ -37,3 +37,26 @@ img{
   width: 450px;
   object-fit: scale-down;
 }
+@media (max-width: 1366px) {
+  /* For smaller notebook monitors */
+  h2 {
+    font-size: 20px; /* Adjust the font size for smaller notebook monitors */
+    line-height: 1.1; /* Adjust the line height for smaller notebook monitors */
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 1600px) {
+  /* For medium-sized notebook monitors */
+  h2 {
+    font-size: 22px; /* Adjust the font size for medium-sized notebook monitors */
+    line-height: 1.2; /* Adjust the line height for medium-sized notebook monitors */
+  }
+}
+
+@media (min-width: 1601px) {
+  /* For larger notebook monitors */
+  h2 {
+    font-size: 24px; /* Adjust the font size for larger notebook monitors */
+    line-height: 1.2; /* Adjust the line height for larger notebook monitors */
+  }
+}
