@@ -16,13 +16,12 @@ export class NavigationBarComponent implements OnInit {
     private zone: NgZone
   ) {}
   sideBarStatus = this.control.sideBarStatus;
-  loginStatus: boolean = false;
+  loginStatus: boolean = this.authenService.isLoggedIn;
   anyLoginStatus: any;
   ngOnDestroy(): void {
     this.anyLoginStatus.unsubscribe();
   }
   ngOnInit(): void {
-
     this.anyLoginStatus = this.authenService.subIsLoggedIn.subscribe((data) => {
       this.zone.run(() => {
         this.loginStatus = data;

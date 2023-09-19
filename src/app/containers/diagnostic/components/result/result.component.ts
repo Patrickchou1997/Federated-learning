@@ -11,12 +11,7 @@ import { FeedDataDiagosticService } from 'src/app/services/diagostic-services/fe
 export class ResultComponent implements OnInit {
   constructor(private router: Router, private feed: FeedDataDiagosticService) {}
   base64textString: string | null = this.feed.base64textString;
-  diagnosticMessage: DiagnosticMessage = {
-    stateError: false,
-    message: '',
-    diagnosticList: [{ diagno: '', prop: 0 }],
-    warningMessage: '',
-  };
+  diagnosticMessage: DiagnosticMessage = this.feed.diagnosticMessage;
 
   ngOnInit(): void {
     this.base64textString = this.feed.base64textString;

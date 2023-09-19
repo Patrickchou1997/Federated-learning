@@ -41,6 +41,7 @@ export class UploadComponent implements OnInit {
             alert(data.message);
           } else {
             this.feed.diagnosticMessage = data;
+            console.log(this.feed.diagnosticMessage)
             this.router.navigateByUrl('/diagnostic/result');
           }
         },
