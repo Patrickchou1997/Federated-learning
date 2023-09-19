@@ -14,8 +14,6 @@ import { ConnectApiService } from 'src/app/services/connect-api.service';
 })
 export class MonitoringComponent implements OnInit {
   value = '';
-  // status = '';
-  // sortBy = '';
   dataSource: MatTableDataSource<ProjectDetail>;
   data: ProjectDetail[] = this.feed.projects;
 
@@ -122,7 +120,6 @@ export class MonitoringComponent implements OnInit {
   }
   calDate(d: string) {
     if (d != '') {
-      // let newDate = new Date(d);
       const t = d.split('.');
       const dt = t[0].split('T');
       const [YY, MM, DD] = dt[0].split('-');

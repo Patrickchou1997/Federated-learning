@@ -70,7 +70,6 @@ export class ConnectApiService {
   }
 
   uploadAppFolder(file: File, projTitle: string, templateID: string) {
-    // let userID = localStorage.getItem('userID');
     let formData = new FormData();
     formData.append('file', file, file.name);
     formData.append('token', `${localStorage.getItem('token')}`);
@@ -78,16 +77,6 @@ export class ConnectApiService {
     formData.append('templateID', templateID);
     return this.http.post<any>(environment.apiUrl + '/upload', formData);
   }
-
-  // submitJob(userId: string, appName: string) {
-  //   let model = {
-  //     token: localStorage.getItem('token'),
-  //   };
-  //   return this.http.put<any>(
-  //     `${environment.fastApi}/submit_job/${userId}?app_name=${appName}`,
-  //     model
-  //   );
-  // }
 
   checkStatus() {
     return this.http.get<any>(environment.apiUrl + '/check-app');
@@ -140,11 +129,9 @@ export class ConnectApiService {
   }
 
   getHead() {
-    // const headers = { 'x-access-token': localStorage.getItem('token') };
     const headers = new Headers({
       'Content-Type': 'application/json',
       Authorization: `Bearer ${localStorage.getItem('token')}`,
     });
-    // return this.http.get<ProjectDetail>(`${environment.apiUrl}/projects`);
   }
 }

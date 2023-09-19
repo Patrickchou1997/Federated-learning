@@ -65,30 +65,4 @@ export class MockDataService {
       return false;
     }
   }
-  // monitoringData: ProjectDetail[] = [
-  //   {
-  //     serverID: 'S00001',
-  //     status: 'completed',
-  //     title: 'ChestX_FL_classification_2022.05.01',
-  //     runNum: 1,
-  //     appName: 'hello world',
-  //     sites: {
-  //       ICT: true,
-  //       RAMA: false,
-  //       KONKAEN: true,
-  //     },
-  //   },
-  //   {
-  //     serverID: 'S00002',
-  //     status: 'in-progress',
-  //     title: 'ChestX_FL_clustering_2022.05.01',
-  //     runNum: 2,
-  //     appName: 'custering my file',
-  //     sites: {
-  //       ICT: true,
-  //       RAMA: true,
-  //       KONKAEN: true,
-  //     },
-  //   },
-  // ];
 }

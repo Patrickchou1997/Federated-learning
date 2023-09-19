@@ -52,20 +52,15 @@ export class NewProjectComponent implements OnInit {
     this.file = event.target.files[0];
   }
   onSubmit() {
-    // if (this.templateN) {
-      if (this.projTitle) {
-        if (this.file != null) {
-          this.uploadAppFolder();
-        } else {
-          alert('Script not found');
-          // document.getElementById('chooseFile')?.click();
-        }
+    if (this.projTitle) {
+      if (this.file != null) {
+        this.uploadAppFolder();
       } else {
-        document.getElementById('projTitle')?.focus();
+        alert('Script not found');
       }
-    // } else {
-    //   alert('Please choose your script template');
-    // }
+    } else {
+      document.getElementById('projTitle')?.focus();
+    }
   }
   uploadAppFolder() {
     this.connect

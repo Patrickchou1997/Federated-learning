@@ -34,7 +34,6 @@ export class TableOverviewComponent implements AfterViewInit {
   users: UsersManagement[] | any = this.feed.usersManagement;
   anyUsersManagement: any;
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
-  // @ViewChild(MatSort) sort: MatSort | any;
 
   sortedData: UsersManagement[] | any;
 
@@ -44,7 +43,6 @@ export class TableOverviewComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // this.dataSource.sort = this.sort;
     this.anyUsersManagement = this.feed.subUsersManagement.subscribe((data) => {
       this.zone.run(() => {
         this.users = data;

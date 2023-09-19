@@ -174,16 +174,4 @@ export class FeedDatasService {
       () => {}
     );
   }
-
-  // async downloadML(jobID: string) {
-  //   return this.connect.DownloadML(jobID).subscribe(
-  //     (data) => {
-  //       console.log(data);
-  //     },
-  //     (error) => {
-  //       alert(JSON.stringify(error));
-  //     },
-  //     () => {}
-  //   );
-  // }
 }
