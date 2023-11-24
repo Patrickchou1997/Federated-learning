@@ -71,14 +71,13 @@ img {
 }
 
 .column {
-
   box-sizing: border-box;
 }
 
 .item {
   border: 1px solid #ccc;
   padding: 5px;
-  margin: 5px;
+  margin: 2.5px;
   display: flex;
   flex-direction: column;
   justify-content: center;

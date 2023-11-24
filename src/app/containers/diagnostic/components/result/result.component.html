@@ -14,7 +14,9 @@
         >
           <div class="item">
             <b>{{ item.diagno }}</b>
-            <h2>{{ item.prop }}</h2>
+            <h2 [ngStyle]="{'font-weight': 'bold', 'color': item.prop > 0.5 ? '#02b602' : 'black'}">
+              {{ calculate_prop(item.prop) }}
+            </h2>
           </div>
         </div>
       </div>

@@ -20,4 +20,11 @@ export class ResultComponent implements OnInit {
     }
     this.diagnosticMessage = this.feed.diagnosticMessage;
   }
+  calculate_prop(prop: any) {
+    if (prop < 0.5) {
+      return 'LOW';
+    } else {
+      return `${(prop*100).toFixed(0)}%`;
+    }
+  }
 }
