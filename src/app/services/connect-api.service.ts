@@ -118,13 +118,13 @@ export class ConnectApiService {
 
   DownloadML(jobID: string) {
     var link = document.createElement('a');
-    link.href = `${environment.fastApi}/download_model/${jobID}`;
+    link.href = `${environment.apiUrl}/download_model?j=${jobID}`;
     link.click();
   }
 
   DownloadLog(jobID: string) {
     var link = document.createElement('a');
-    link.href = `${environment.fastApi}/download_log/${jobID}`;
+    link.href = `${environment.apiUrl}/download_log?j=${jobID}`;
     link.click();
   }
 
