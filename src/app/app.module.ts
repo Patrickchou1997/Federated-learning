@@ -40,6 +40,10 @@ import { ResultComponent } from './containers/diagnostic/components/result/resul
 import { HomeDiagnosticComponent } from './containers/diagnostic/components/home-diagnostic/home-diagnostic.component';
 import { MainComponent } from './components/main/main.component';
 import { LoginDiagnosticComponent } from './containers/diagnostic/components/login-diagnostic/login-diagnostic.component';
+import { DentistryComponent } from './containers/dentistry/dentistry.component';
+import { HomeDentistryComponent } from './containers/dentistry/components/home-dentistry/home-dentistry.component';
+import { UploadDentistryComponent } from './containers/dentistry/components/upload-dentistry/upload-dentistry.component';
+import { ResultDentistryComponent } from './containers/dentistry/components/result-dentistry/result-dentistry.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +66,10 @@ import { LoginDiagnosticComponent } from './containers/diagnostic/components/log
     HomeDiagnosticComponent,
     MainComponent,
     LoginDiagnosticComponent,
+    DentistryComponent,
+    HomeDentistryComponent,
+    UploadDentistryComponent,
+    ResultDentistryComponent,
   ],
   imports: [
     HttpClientModule,

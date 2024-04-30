@@ -16,6 +16,10 @@ import { HomeComponent } from './containers/home/home.component';
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { LoginDiagnosticComponent } from './containers/diagnostic/components/login-diagnostic/login-diagnostic.component';
 import { DiagnosticGuard } from './guards/diagnostic.guard';
+import { DentistryComponent } from './containers/dentistry/dentistry.component';
+import { HomeDentistryComponent } from './containers/dentistry/components/home-dentistry/home-dentistry.component';
+import { UploadDentistryComponent } from './containers/dentistry/components/upload-dentistry/upload-dentistry.component';
+import { ResultDentistryComponent } from './containers/dentistry/components/result-dentistry/result-dentistry.component';
 
 const routes: Routes = [
   {
@@ -78,6 +82,24 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginDiagnosticComponent,
+      },
+    ],
+  },
+  {
+    path: 'dentistry',
+    component: DentistryComponent,
+    children: [
+      {
+        path: '',
+        component: HomeDentistryComponent
+      },
+      {
+        path: 'upload',
+        component: UploadDentistryComponent
+      },
+      {
+        path: 'result',
+        component: ResultDentistryComponent
       },
     ],
   },

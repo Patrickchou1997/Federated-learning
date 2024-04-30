@@ -1,0 +1,39 @@
+<div class="main">
+    <div class="header">
+      <h1>Dentistry Radiograph Diagnostic Tool</h1>
+    </div>
+    <div class="content">
+      <div class="upload-form">
+        <div class="form">
+            <input
+              #chooseFile
+              id="chooseFile"
+              type="file"
+              accept="image/*"
+              (change)="onChange($event)"
+            />
+          <div class="boxSizedX"></div>
+          <!-- <mat-hint>*.zip</mat-hint> -->
+          <button
+            mat-raised-button
+            class="btnUpload txtLight"
+            (click)="onPressed()"
+            [disabled]="!file"
+            [class.disabled-button]="!file"
+          >
+            Upload
+          </button>
+          <!-- <div class="box"></div>
+          <div class="boxSizedX"></div>
+          <button mat-raised-button class="btnUpload txtLight" routerLink="/diagnostic/result">
+            Upload
+          </button> -->
+        </div>
+        <div class="boxSizedY"></div>
+        <h3>
+          Please upload your chest x-ray images to get the diagnostic result.
+        </h3>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,27 @@
+<div class="main">
+  <div class="content">
+    <!-- <img src="assets/chest.png" alt="" /> -->
+    <img
+      style="height: 60vh;width: 100vw; object-fit: contain"
+      src="data:image/png;base64,{{ base64textString }}"
+      alt="Base64 Image"
+    />
+  </div>
+  <div class="footer">
+    <button
+      mat-raised-button
+      class="btnResult txtLight"
+      routerLink="/dentistry/upload"
+    >
+      New Case
+    </button>
+    <!-- <button
+        mat-raised-button
+        class="btnResult txtLight"
+        routerLink="/diagnostic"
+        disabled
+      >
+        Export Result
+      </button> -->
+  </div>
+</div>
