@@ -12,5 +12,8 @@ export class ResultDentistryComponent implements OnInit {
   constructor(private router: Router, private dentis: DentistryService) {}
   ngOnInit(): void {
     this.base64textString = this.dentis.base64textString;
+    if(!this.base64textString){
+      this.router.navigateByUrl('/dentistry')
+    }
   }
 }

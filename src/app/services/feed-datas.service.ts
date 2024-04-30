@@ -152,7 +152,6 @@ export class FeedDatasService {
         this.projects.sort((a: any, b: any) =>
           a.submit_time > b.submit_time ? -1 : 1
         );
-        console.log(this.projects);
         this.subProjects.next(this.projects);
       },
       (error) => {

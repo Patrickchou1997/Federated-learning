@@ -32,7 +32,6 @@ export class UploadDentistryComponent implements OnInit {
     if (this.file != null) {
       this.dentis.getImage(this.file).subscribe(
         (data) => {
-          console.log(data)
           if (data.stateError) {
             alert(data);
           } else {
