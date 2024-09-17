@@ -67,17 +67,17 @@ const routes: Routes = [
       {
         path: '',
         component: HomeDiagnosticComponent,
-        canActivate: [DiagnosticGuard],
+        // canActivate: [DiagnosticGuard],
       },
       {
         path: 'upload',
         component: UploadComponent,
-        canActivate: [DiagnosticGuard],
+        // canActivate: [DiagnosticGuard],
       },
       {
         path: 'result',
         component: ResultComponent,
-        canActivate: [DiagnosticGuard],
+        // canActivate: [DiagnosticGuard],
       },
       {
         path: 'login',
