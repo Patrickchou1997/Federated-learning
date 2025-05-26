@@ -1,5 +1,3 @@
-import { ResultComponent } from './containers/diagnostic/components/result/result.component';
-import { UploadComponent } from './containers/diagnostic/components/upload/upload.component';
 import { HomeDiagnosticComponent } from './containers/diagnostic/components/home-diagnostic/home-diagnostic.component';
 import { MainComponent } from './components/main/main.component';
 import { DiagnosticComponent } from './containers/diagnostic/diagnostic.component';
@@ -67,16 +65,6 @@ const routes: Routes = [
       {
         path: '',
         component: HomeDiagnosticComponent,
-        // canActivate: [DiagnosticGuard],
-      },
-      {
-        path: 'upload',
-        component: UploadComponent,
-        // canActivate: [DiagnosticGuard],
-      },
-      {
-        path: 'result',
-        component: ResultComponent,
         // canActivate: [DiagnosticGuard],
       },
       {

@@ -16,7 +16,6 @@
 }
 img {
   width: 100%;
-  object-fit: contain;
 }
 .footer {
   display: flex;
@@ -95,10 +94,11 @@ input[type="file"] {
 }
 
 .image-preview img {
-  width: 80%;
+  width: 90%;
   height: auto;
-  /* margin-top: 20px; */
+  object-fit: contain;
 }
+
 .progress-bar {
   width: 330px;
   background-color: #f3f3f3;
@@ -171,6 +171,9 @@ input[type="file"] {
   }
   .content {
     width: 95vw;
+  }
+  .image-preview img {
+    width: 100%;
   }
 }
 

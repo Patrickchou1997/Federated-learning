@@ -35,8 +35,6 @@ import { UsersManagementComponent } from './containers/users-management/users-ma
 import { TableOverviewComponent } from './components/table-overview/table-overview.component';
 import { DialogCardComponent } from './components/dialog-card/dialog-card.component';
 import { DiagnosticComponent } from './containers/diagnostic/diagnostic.component';
-import { UploadComponent } from './containers/diagnostic/components/upload/upload.component';
-import { ResultComponent } from './containers/diagnostic/components/result/result.component';
 import { HomeDiagnosticComponent } from './containers/diagnostic/components/home-diagnostic/home-diagnostic.component';
 import { MainComponent } from './components/main/main.component';
 import { LoginDiagnosticComponent } from './containers/diagnostic/components/login-diagnostic/login-diagnostic.component';
@@ -61,8 +59,6 @@ import { ResultDentistryComponent } from './containers/dentistry/components/resu
     TableOverviewComponent,
     DialogCardComponent,
     DiagnosticComponent,
-    UploadComponent,
-    ResultComponent,
     HomeDiagnosticComponent,
     MainComponent,
     LoginDiagnosticComponent,

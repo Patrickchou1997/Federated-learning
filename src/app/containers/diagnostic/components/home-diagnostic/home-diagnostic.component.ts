@@ -132,6 +132,8 @@ export class HomeDiagnosticComponent implements OnInit {
       setTimeout(() => {
         this.scrollToSection('result');
       }, 500);
+    } else {
+      alert('Please choose image');
     }
   }
 
